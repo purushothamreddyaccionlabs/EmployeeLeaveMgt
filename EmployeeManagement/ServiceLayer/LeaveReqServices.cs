@@ -21,20 +21,9 @@ namespace EmployeeManagement.ServiceLayer
         public LeaveRequest postLeavereq(LeaveRequest request)
         {
             var employeeId = _Dbcontext.employee.Find(request.empId);
-
-            //if (employeeId != null)
-            //{
-            //    var days = request.numberofDays;
-
-            //    if (days <= 2)
-            //    {
-            //        *//*  return RedirectToActionResult()*//*
-            //    }
-            //}
             _Dbcontext.leaverequest.Add(request);
             _Dbcontext.SaveChanges();
             return request;
-          
         }
     }
 }

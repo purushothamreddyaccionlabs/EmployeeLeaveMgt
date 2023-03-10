@@ -33,12 +33,6 @@ namespace EmployeeManagement.Controllers
             }
             return Ok(data);
         }
-      /*  [HttpGet]
-        [Route("getItem/{id}")]
-        public IActionResult GetindivisualItems(int id)
-        {
-            var data = _ileaveTable.getexatvalue(id);
-            return Ok(data);
-        }*/
+        
     }
 }
