@@ -37,30 +37,19 @@ namespace EmployeeManagement.Controllers
         [Route("reqLeave")]
         public IActionResult ReqLeave(LeaveRequest request)
         {
-   
-            if(request.leavetype == 2 && request.numberofDays >= 3)
+            var reqdata = request;
+            var fianlResponse = _ileavereq.RequestedLeave(reqdata.empId, reqdata);
+            if(fianlResponse.errmsg == null)
             {
-                var error = "Needed medical certificate for leave approval if more than 2 days leave";
-                return Ok(error);
+                var postLeave = _ileavereq.postLeavereq(reqdata);
+                return Created("/" + postLeave.empId, postLeave);
             }
             else
             {
-                var no_ofdays = request.numberofDays; //no of leaves
-                var empid1 = _ileaveTable.getleavesinfobyId(request.empId);
-                if (request.leavetype == 1)
-                {
-                    empid1.privilegeLeave = empid1.privilegeLeave - no_ofdays;
-                    _ileaveTable.Editdata(empid1);
-                }
-                if(request.leavetype == 2)
-                {
-                    empid1.wellnessLeave = empid1.wellnessLeave - no_ofdays;
-                    _ileaveTable.Editdata(empid1);
-                }
-
+                return Ok(fianlResponse.errmsg);
             }
-            var result = _ileavereq.postLeavereq(request);
-            return Created("/"+result.leavereqId,result);
+         
+            
         }
     }
 }

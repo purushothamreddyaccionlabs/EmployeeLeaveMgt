@@ -11,5 +11,6 @@ namespace EmployeeManagement.DBLayer
         public DbSet<JobDetails> jobdetails { get; set; } 
         public DbSet<LeavesTable> levesTable { get; set; }
         public DbSet<LeaveRequest> leaverequest { get; set; }
+        public DbSet<ResponseStatus> responseStatuses { get; set; }
     }
 }
