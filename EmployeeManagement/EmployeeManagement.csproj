@@ -16,4 +16,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\Dot Net Projects\EmployeeManagement\EmployeeManagement\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\Dot Net Projects\EmployeeManagement\EmployeeManagement\.editorconfig" />
+  </ItemGroup>
+
 </Project>

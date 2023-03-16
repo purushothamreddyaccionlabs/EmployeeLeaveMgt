@@ -8,16 +8,16 @@ namespace EmployeeManagement.Controllers
     [Route("api/[controller]")]
     public class EmployeeController : Controller
     {
-        private IEmployee _Iemployee;
-        public EmployeeController(IEmployee Emp)
+        private IEmployee Iemployee;
+        public EmployeeController(IEmployee Employee)
         {
-            _Iemployee = Emp;
+            Iemployee = Employee;
         }
         [HttpGet]
         [Route("GetEmployeeList")]
-        public IActionResult Getemp()
+        public IActionResult GetEmployeeDetails()
         {
-            var result = _Iemployee.getEmployeeList();
+            var result = Iemployee.GetEmployeeList();
             return Ok(result);
         }
 
@@ -25,8 +25,8 @@ namespace EmployeeManagement.Controllers
         [Route("AddEmployee")]
         public IActionResult AddEmployee(Employee employee)
         {
-            _Iemployee.AddnewEmployee(employee);
-            return Created("/" + employee.empId, employee);
+            Iemployee.AddNewEmployee(employee);
+            return Created("/" + employee.EmpId, employee);
         }
     }
 }

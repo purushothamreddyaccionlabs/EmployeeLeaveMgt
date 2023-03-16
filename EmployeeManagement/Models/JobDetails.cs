@@ -5,12 +5,12 @@ namespace EmployeeManagement.Models
     public class JobDetails
     {
         [Key]
-        public int jobId { get; set; }
+        public int JobId { get; set; }
         [Required]
-        public string designation { get; set; }
-        public string department { get; set; }
-        public int minsalary { get; set; }
-        public int maxsalary { get; set; }
+        public string Designation { get; set; }
+        public string Department { get; set; }
+        public int Minsalary { get; set; }
+        public int Maxsalary { get; set; }
 
     }
 }

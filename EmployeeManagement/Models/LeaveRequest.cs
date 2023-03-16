@@ -6,14 +6,14 @@ namespace EmployeeManagement.Models
     public class LeaveRequest
     {
         [Key]
-        public int leavereqId { get; set; }
+        public int LeavereqId { get; set; }
         [Required]
         [ForeignKey("employee")]
-        public int empId { get; set; }
+        public int EmpId { get; set; }
         [Required]
-        public int leavetype { get; set; }
+        public int LeaveType { get; set; }
         [Required]
-        public int numberofDays { get; set; }
-        public string reason { get; set; }
+        public int NumberofDays { get; set; }
+        public string Reason { get; set; }
     }
 }

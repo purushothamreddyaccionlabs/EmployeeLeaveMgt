@@ -7,14 +7,14 @@ namespace EmployeeManagement.Models
     public class Employee
     {
         [Key]
-        public int empId { get; set; }
-        public string firstname { get; set; }
-        public string lastname { get; set; }
-        public int age { get; set; }
-        public string gender { get; set; }
+        public int EmpId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int Age { get; set; }
+        public string Gender { get; set; }
 
         [ForeignKey("jobdetails")]
-        public int jobId { get; set; }
-        public Int64 contact { get; set; }
+        public int JobId { get; set; }
+        public Int64 Contact { get; set; }
     }
 }

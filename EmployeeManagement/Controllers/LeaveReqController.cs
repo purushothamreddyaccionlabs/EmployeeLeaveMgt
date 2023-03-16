@@ -7,46 +7,43 @@ namespace EmployeeManagement.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-
-  
     public class LeaveReqController : Controller
     {
         #region Interfaces
-        private ILeaveReq _ileavereq;
-        private ILeaveTable _ileaveTable;
+        private ILeaveReq ILeavereq;
+     
         #endregion
 
         #region constructor
-        public LeaveReqController(ILeaveReq ileavereq, ILeaveTable ileaveTable)
+        public LeaveReqController(ILeaveReq Leavereq)
         {
-            _ileavereq = ileavereq;
-            _ileaveTable = ileaveTable;
+            ILeavereq = Leavereq;
         }
         #endregion
 
 
         [HttpGet]
-        [Route("Getleavereq")]
+        [Route("GetleavesList")]
         public IActionResult Get()
         {
-            var result = _ileavereq.GetLeaveReqs();
+            var result = ILeavereq.GetLeaveReqs();
             return Ok(result);
         }
 
         [HttpPost]
-        [Route("reqLeave")]
-        public IActionResult ReqLeave(LeaveRequest request)
+        [Route("RequestLeave")]
+        public IActionResult RequestLeave(LeaveRequest request)
         {
             var reqdata = request;
-            var fianlResponse = _ileavereq.RequestedLeave(reqdata.empId, reqdata);
-            if(fianlResponse.errmsg == null)
+            var fianlResponse = ILeavereq.RequestedLeave(reqdata.EmpId, reqdata);
+            if(fianlResponse.Errmsg == null)
             {
-                var postLeave = _ileavereq.postLeavereq(reqdata);
-                return Created("/" + postLeave.empId, postLeave);
+                var postLeave = ILeavereq.PostLeavereq(reqdata);
+                return Created("/" + postLeave.EmpId, postLeave);
             }
             else
             {
-                return Ok(fianlResponse.errmsg);
+                return Ok(fianlResponse.Errmsg);
             }
          
             

@@ -7,11 +7,11 @@ namespace EmployeeManagement.Models
     {
         #region Fields
         [Key]
-        public int leaveId { get; set; }
-        public int privilegeLeave { get; set; }
-        public int wellnessLeave { get; set; }
+        public int LeaveId { get; set; }
+        public int PrivilegeLeave { get; set; }
+        public int WellnessLeave { get; set; }
         [Required]
-        public int empId { get; set; }
+        public int EmpId { get; set; }
         #endregion
     }
 }

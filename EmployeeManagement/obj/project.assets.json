@@ -3137,11 +3137,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\git\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.csproj",
+      "projectUniqueName": "D:\\Dot Net Projects\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.csproj",
       "projectName": "EmployeeManagement",
-      "projectPath": "D:\\git\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.csproj",
+      "projectPath": "D:\\Dot Net Projects\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.csproj",
       "packagesPath": "C:\\Users\\AL5402\\.nuget\\packages\\",
-      "outputPath": "D:\\git\\EmployeeManagement\\EmployeeManagement\\obj\\",
+      "outputPath": "D:\\Dot Net Projects\\EmployeeManagement\\EmployeeManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\AL5402\\AppData\\Roaming\\NuGet\\NuGet.Config",

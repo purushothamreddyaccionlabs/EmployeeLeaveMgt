@@ -6,22 +6,22 @@ namespace EmployeeManagement.ServiceLayer
 {
     public class JobDetailsServices:IJobDetails
     {
-        private AppDBContext _dbcontext;
+        private readonly AppDBContext Db;
         public JobDetailsServices(AppDBContext dbcontext)
         {
-            _dbcontext = dbcontext;
+            Db = dbcontext;
         }
 
         public JobDetails CreateJob(JobDetails jobdetails)
         {
-            _dbcontext.jobdetails.Add(jobdetails);
-            _dbcontext.SaveChanges();
+            Db.jobdetails.Add(jobdetails);
+            Db.SaveChanges();
             return jobdetails;
         }
 
         public List<JobDetails> GetJobDetails()
         {
-            return _dbcontext.jobdetails.ToList();
+            return Db.jobdetails.ToList();
         }
     }
 }

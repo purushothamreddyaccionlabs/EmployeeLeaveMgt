@@ -6,7 +6,7 @@ namespace EmployeeManagement.Interfaces
     {
         List<LeavesTable> Getleaveinfo();
 
-        LeavesTable getleavesinfobyId(int id);
+        LeavesTable GetLeavesInfoById(int id);
 
         LeavesTable Editdata(LeavesTable data);
 

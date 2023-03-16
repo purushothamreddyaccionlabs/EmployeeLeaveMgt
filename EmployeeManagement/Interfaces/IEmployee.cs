@@ -4,9 +4,9 @@ namespace EmployeeManagement.Interfaces
 {
     public interface IEmployee
     {
-        List<Employee> getEmployeeList();
+        List<Employee> GetEmployeeList();
 
-        Employee AddnewEmployee(Employee employee);
+        Employee AddNewEmployee(Employee employee);
 
       
     }

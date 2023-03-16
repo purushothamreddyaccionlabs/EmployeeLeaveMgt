@@ -6,22 +6,22 @@ namespace EmployeeManagement.ServiceLayer
 {
     public class EmployeeServices : IEmployee
     {
-        private AppDBContext _dbContext;
+        private readonly AppDBContext Db;
         public EmployeeServices(AppDBContext dbContext)
         {
-            _dbContext = dbContext;
+            Db = dbContext;
         }
 
-        public Employee AddnewEmployee(Employee employee)
+        public Employee AddNewEmployee(Employee employee)
         {
-            _dbContext.employee.Add(employee);
-            _dbContext.SaveChanges();
+            Db.employee.Add(employee);
+            Db.SaveChanges();
             return employee;
         }
 
-        public List<Employee> getEmployeeList()
+        public List<Employee> GetEmployeeList()
         {
-            return _dbContext.employee.ToList();
+            return Db.employee.ToList();
         }
     }
 }

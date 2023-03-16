@@ -6,8 +6,8 @@ namespace EmployeeManagement.Interfaces
     {
         List<LeaveRequest> GetLeaveReqs();
 
-        LeaveRequest postLeavereq(LeaveRequest request);
-     /*   object postLeavereq(ResponseStatus fianlResponse);*/
+        LeaveRequest PostLeavereq(LeaveRequest request);
+   
 
         ResponseStatus RequestedLeave(int empid, LeaveRequest reqData);
 

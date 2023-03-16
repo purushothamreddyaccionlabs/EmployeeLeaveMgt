@@ -8,27 +8,27 @@ namespace EmployeeManagement.Controllers
     [Route("api/[controller]")]
     public class LeaveTableController : Controller
     {
-        private readonly ILeaveTable _ileaveTable;
-        public LeaveTableController(ILeaveTable ileaveTable)
+        private readonly ILeaveTable ILeaveTable;
+        public LeaveTableController(ILeaveTable LeaveTable)
         {
-            _ileaveTable = ileaveTable;
+            ILeaveTable = LeaveTable;
         }
         [HttpGet]
         [Route("GetleaveInfo")]
         public IActionResult Get()
         {
-            var data = _ileaveTable.Getleaveinfo();
+            var data = ILeaveTable.Getleaveinfo();
             return Ok(data);
         }
         [HttpPut]
         [Route("editdata/{id}")]
-        public IActionResult editdata(int id,LeavesTable data)
+        public IActionResult Editdata(int id,LeavesTable data)
         {
-            var existingdata = _ileaveTable.getleavesinfobyId(id);
+            var existingdata = ILeaveTable.GetLeavesInfoById(id);
             if(existingdata != null) 
             {
-                id = existingdata.leaveId;
-                _ileaveTable.Editdata(data);
+                id = existingdata.LeaveId;
+                ILeaveTable.Editdata(data);
 
             }
             return Ok(data);

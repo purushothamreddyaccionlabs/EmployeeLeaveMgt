@@ -8,26 +8,26 @@ namespace EmployeeManagement.Controllers
     [Route("api/[controller]")]
     public class JobDetailsController : Controller
     {
-        private IJobDetails _Ijobdetails;
-        public JobDetailsController(IJobDetails jobdetails)
+        private IJobDetails Ijobdetails;
+        public JobDetailsController(IJobDetails Jobdetails)
         {
-            _Ijobdetails = jobdetails;
+            Ijobdetails = Jobdetails;
         }
 
         [HttpGet]
         [Route("GetJobDetails")]
-        public IActionResult Get()
+        public IActionResult GetJobDetailsList()
         {
-            var result = _Ijobdetails.GetJobDetails();
+            var result = Ijobdetails.GetJobDetails();
             return Ok(result);
         }
 
         [HttpPost]
         [Route("CreateJobDetails")]
-        public IActionResult Create(JobDetails jobdetails)
+        public IActionResult Create(JobDetails Jobdetails)
         {
-            _Ijobdetails.CreateJob(jobdetails);
-            return Created("/" + jobdetails.jobId, jobdetails);
+            Ijobdetails.CreateJob(Jobdetails);
+            return Created("/" + Jobdetails.JobId, Jobdetails);
         }
     }
 }

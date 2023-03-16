@@ -7,71 +7,68 @@ namespace EmployeeManagement.ServiceLayer
 {
     public class LeaveReqServices:ILeaveReq
     {
-        private readonly AppDBContext _Dbcontext;
+        private readonly AppDBContext Db;
         public LeaveReqServices(AppDBContext dbcontext)
         {
-            _Dbcontext = dbcontext;
+            Db = dbcontext;
         }
 
         public List<LeaveRequest> GetLeaveReqs()
         {
-            return _Dbcontext.leaverequest.ToList();
+            return Db.leaverequest.ToList();
         }
 
-        public LeaveRequest postLeavereq(LeaveRequest request)
+        public LeaveRequest PostLeavereq(LeaveRequest request)
         {
-            var employeeId = _Dbcontext.employee.Find(request.empId);
-            _Dbcontext.leaverequest.Add(request);
-            _Dbcontext.SaveChanges();
+            var employeeId = Db.employee.Find(request.EmpId);
+            Db.leaverequest.Add(request);
+            Db.SaveChanges();
             return request;
         }
 
-   /*     public object postLeavereq(ResponseStatus fianlResponse)
-        {
-            throw new NotImplementedException();
-        }*/
+ 
 
-        ResponseStatus ILeaveReq.RequestedLeave(int empid, LeaveRequest reqData)
+        ResponseStatus ILeaveReq.RequestedLeave(int Empid, LeaveRequest reqData)
         {
             //Priveleage leave
             //Wellness leave
             ResponseStatus result = new ResponseStatus(); //Creating object or instance of ResponseStatus model
         
-            if (reqData.leavetype == 2 && reqData.numberofDays >= 3)
+            if (reqData.LeaveType == 2 && reqData.NumberofDays >= 3)
             {
                 var error = "Needed medical certificate for leave approval if more than 2 days leave";
-                result.errmsg = error;
+                result.Errmsg = error;
                 return result;
             }
             else
             {
-                var noOfLeaves = reqData.numberofDays;
-                var empLeaveTabledata = _Dbcontext.levesTable.Find(empid);
-               if(reqData.leavetype == 1)
+                var noOfLeaves = reqData.NumberofDays;
+                var empLeaveTabledata = Db.levesTable.Find(Empid);
+               if(reqData.LeaveType == 1)
                 {
-                    var remainingPriLeaves = empLeaveTabledata.privilegeLeave;
+                    var remainingPriLeaves = empLeaveTabledata.PrivilegeLeave;
                     if(remainingPriLeaves >= noOfLeaves)
                     {
-                        empLeaveTabledata.privilegeLeave -= noOfLeaves;
+                        empLeaveTabledata.PrivilegeLeave -= noOfLeaves;
                     }
                     else
                     {
                         var error = "You don't have enough leaves to apply";
-                        result.errmsg = error;
+                        result.Errmsg = error;
                         return result;
                     }
                     
-                }else if (reqData.leavetype == 2)
+                }else if (reqData.LeaveType == 2)
                 {
-                    var remainingWellnessLeaves = empLeaveTabledata.wellnessLeave;
+                    var remainingWellnessLeaves = empLeaveTabledata.WellnessLeave;
                     if(remainingWellnessLeaves >= noOfLeaves)
                     {
-                        empLeaveTabledata.wellnessLeave -= noOfLeaves;
+                        empLeaveTabledata.WellnessLeave -= noOfLeaves;
                     }
                     else
                     {
                         var error = "You don't have enough wellness leaves to apply";
-                        result.errmsg = error;
+                        result.Errmsg = error;
                         return result;
                     }
                 }
