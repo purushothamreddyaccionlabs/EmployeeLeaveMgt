@@ -24,4 +24,8 @@
     <None Include="D:\Dot Net Projects\EmployeeManagement\EmployeeManagement\.editorconfig" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceLayer1\Models.csproj" />
+  </ItemGroup>
+
 </Project>

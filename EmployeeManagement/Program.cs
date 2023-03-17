@@ -1,7 +1,7 @@
-using EmployeeManagement.DBLayer;
-using EmployeeManagement.Interfaces;
-using EmployeeManagement.ServiceLayer;
+using EmployeeManagement.DBContextLayer;
 using Microsoft.EntityFrameworkCore;
+using BusinessLayer.Interfaces;
+using BusinessLayer.ServiceLayer;
 
 var builder = WebApplication.CreateBuilder(args);
 

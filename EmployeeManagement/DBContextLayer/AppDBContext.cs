@@ -1,7 +1,8 @@
-﻿using EmployeeManagement.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Models;
 
-namespace EmployeeManagement.DBLayer
+namespace EmployeeManagement.DBContextLayer
+
 {
     public class AppDBContext:DbContext
     {

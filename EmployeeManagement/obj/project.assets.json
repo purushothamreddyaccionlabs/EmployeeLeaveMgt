@@ -1147,6 +1147,16 @@
             "rid": "win"
           }
         }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
       }
     }
   },
@@ -3121,6 +3131,11 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../ServiceLayer1/Models.csproj",
+      "msbuildProject": "../ServiceLayer1/Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3128,6 +3143,7 @@
       "Microsoft.EntityFrameworkCore >= 8.0.0-preview.1.23111.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.0-preview.1.23111.4",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0-preview.1.23111.4",
+      "Models >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -3157,7 +3173,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Dot Net Projects\\EmployeeManagement\\ServiceLayer1\\Models.csproj": {
+              "projectPath": "D:\\Dot Net Projects\\EmployeeManagement\\ServiceLayer1\\Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

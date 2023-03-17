@@ -173,3 +173,5 @@ D:\Dot Net Projects\EmployeeManagement\EmployeeManagement\obj\Debug\net6.0\Emplo
 D:\Dot Net Projects\EmployeeManagement\EmployeeManagement\obj\Debug\net6.0\EmployeeManagement.genruntimeconfig.cache
 D:\Dot Net Projects\EmployeeManagement\EmployeeManagement\obj\Debug\net6.0\ref\EmployeeManagement.dll
 D:\Dot Net Projects\EmployeeManagement\EmployeeManagement\bin\Debug\net6.0\libman.json
+D:\Dot Net Projects\EmployeeManagement\EmployeeManagement\bin\Debug\net6.0\Models1.dll
+D:\Dot Net Projects\EmployeeManagement\EmployeeManagement\bin\Debug\net6.0\Models1.pdb

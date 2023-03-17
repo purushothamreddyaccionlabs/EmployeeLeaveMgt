@@ -1,7 +1,6 @@
-﻿using EmployeeManagement.DBLayer;
-using EmployeeManagement.Interfaces;
-using EmployeeManagement.Models;
+﻿using Models;
 using Microsoft.AspNetCore.Mvc;
+using BusinessLayer.Interfaces;
 
 namespace EmployeeManagement.Controllers
 {

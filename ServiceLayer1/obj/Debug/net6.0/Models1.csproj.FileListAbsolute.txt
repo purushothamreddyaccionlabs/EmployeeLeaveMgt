@@ -1,0 +1,12 @@
+D:\Dot Net Projects\EmployeeManagement\ServiceLayer1\bin\Debug\net6.0\Models1.deps.json
+D:\Dot Net Projects\EmployeeManagement\ServiceLayer1\bin\Debug\net6.0\Models1.dll
+D:\Dot Net Projects\EmployeeManagement\ServiceLayer1\bin\Debug\net6.0\Models1.pdb
+D:\Dot Net Projects\EmployeeManagement\ServiceLayer1\obj\Debug\net6.0\Models1.csproj.AssemblyReference.cache
+D:\Dot Net Projects\EmployeeManagement\ServiceLayer1\obj\Debug\net6.0\Models1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dot Net Projects\EmployeeManagement\ServiceLayer1\obj\Debug\net6.0\Models1.AssemblyInfoInputs.cache
+D:\Dot Net Projects\EmployeeManagement\ServiceLayer1\obj\Debug\net6.0\Models1.AssemblyInfo.cs
+D:\Dot Net Projects\EmployeeManagement\ServiceLayer1\obj\Debug\net6.0\Models1.csproj.CoreCompileInputs.cache
+D:\Dot Net Projects\EmployeeManagement\ServiceLayer1\obj\Debug\net6.0\Models1.dll
+D:\Dot Net Projects\EmployeeManagement\ServiceLayer1\obj\Debug\net6.0\refint\Models1.dll
+D:\Dot Net Projects\EmployeeManagement\ServiceLayer1\obj\Debug\net6.0\Models1.pdb
+D:\Dot Net Projects\EmployeeManagement\ServiceLayer1\obj\Debug\net6.0\ref\Models1.dll
